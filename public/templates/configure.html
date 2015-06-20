@@ -24,8 +24,10 @@
       </div>
 
       <div class="taskAdd">
-        <input type="text" class="form-control" ng-model="nextTask" />
-        <button class="btn btn-success" ng-click="addTask()">Add</button>
+        <form class="form-inline">
+          <input type="text" class="form-control" ng-model="nextTask" placeholder="Task title" />
+          <button class="btn btn-success" ng-click="addTask()">Add</button>
+        </form>
       </div>
 
     </div>

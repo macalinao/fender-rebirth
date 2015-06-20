@@ -24,6 +24,9 @@ angular.module('app', ['ui.router'])
   $scope.tasks = [];
 
   $scope.addTask = function() {
+    if (!$scope.nextTask) {
+      return;
+    }
     $scope.tasks.push({
       title: $scope.nextTask
     });
