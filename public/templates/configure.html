@@ -13,10 +13,17 @@
     <div class="col-md-6">
       <h2>Docker</h2>
       <p>Enter your Docker configuration below. This will be used to build and host your test suite.</p>
-      <h3>Dockerfile</h3>
-      <div ui-ace ng-model="files.dockerfile"></div>
-      <h3>docker-compose.yml</h3>
-      <div ui-ace ng-model="files.dockerCompose"></div>
+
+      <tabset>
+        <tab heading="Dockerfile">
+          <h3>Dockerfile</h3>
+          <div ui-ace ng-model="files.dockerfile"></div>
+        </tab>
+        <tab heading="docker-compose.yml">
+          <h3>docker-compose.yml</h3>
+          <div ui-ace ng-model="files.dockerCompose"></div>
+        </tab>
+
     </div>
 
     <div class="col-md-6">
