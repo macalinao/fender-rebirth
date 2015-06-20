@@ -58,7 +58,11 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
   };
 
   $scope.markTask = function(task, status) {
-    task.status = status;
+    if (task.status === status) {
+      task.status = null;
+    } else {
+      task.status = status;
+    }
   };
 
 })
