@@ -5,15 +5,24 @@ textarea.form-control {
 .configure-task {
   border-bottom: 1px #eee solid;
   line-height: 0px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .configure-task p {
-  margin: 10px;
+  margin: 15px;
+  display: inline-block;
+}
+
+.configure-task button {
+  float: right;
 }
 
 .configure-task:last-child {
   border-bottom: none;
+}
+
+.configure-task:hover {
+  background-color: #eee;
 }
 
 .ace_editor {
@@ -24,4 +33,23 @@ footer {
   margin-top: 100px;
   background-color: #eee;
   padding: 30px;
+}
+
+.task-add {
+  margin-bottom: 20px;
+}
+
+#tasks {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }

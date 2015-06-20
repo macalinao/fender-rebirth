@@ -10,7 +10,7 @@
 
   <div class="row">
 
-    <div class="col-md-6">
+    <div class="col-md-7">
       <h2>Docker</h2>
       <p>Enter your Docker configuration below. This will be used to build and host your test suite.</p>
 
@@ -26,11 +26,11 @@
 
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-5">
       <h2>Tasks</h2>
       <p>Enter all the behaviors you want tested in your app.</p>
 
-      <div class="taskAdd">
+      <div class="task-add">
         <form class="form-inline">
           <input type="text" class="form-control" ng-model="nextTask" placeholder="Task title" />
           <button class="btn btn-success" ng-click="addTask()"><i class="fa fa-plus"></i>&nbsp;Add</button>
@@ -40,9 +40,16 @@
       <div id="tasks">
         <div ng-repeat="task in tasks" class="configure-task">
           <p>{{ task.title }}</p>
+          <button href="#" ng-click="deleteTask($index)" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-lg btn-primary">Create My Test Suite!</button>
     </div>
   </div>
 

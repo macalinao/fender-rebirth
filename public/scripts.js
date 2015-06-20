@@ -23,6 +23,10 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
   $scope.files = {};
   $scope.tasks = [];
 
+  $scope.deleteTask = function(i) {
+    $scope.tasks.splice(i, 1);
+  };
+
   $scope.addTask = function() {
     if (!$scope.nextTask) {
       return;
