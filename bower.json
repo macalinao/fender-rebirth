@@ -1,7 +1,7 @@
 {
-  "name": "frontend",
+  "name": "fender",
   "version": "0.0.0",
-  "homepage": "https://github.com/dockerHackathon2015/frontend",
+  "homepage": "https://github.com/dockerHackathon2015/fender",
   "authors": [
     "Ian Macalinao <me@ian.pw>"
   ],

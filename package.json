@@ -1,7 +1,7 @@
 {
-  "name": "frontend",
+  "name": "fender",
   "version": "1.0.0",
-  "description": "Frontend",
+  "description": "Fender",
   "main": "app.js",
   "scripts": {
     "start": "node app",
