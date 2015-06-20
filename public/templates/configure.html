@@ -17,6 +17,17 @@
     <div class="col-md-6">
       <h2>Tasks</h2>
       <p>List the tasks you want to have tested.</p>
+      <div id="tasks">
+        <div ng-repeat="task in tasks" class="configure-task">
+          <p>{{ task.title }}</p>
+        </div>
+      </div>
+
+      <div class="taskAdd">
+        <input type="text" class="form-control" ng-model="nextTask" />
+        <button class="btn btn-success" ng-click="addTask()">Add</button>
+      </div>
+
     </div>
   </div>
 

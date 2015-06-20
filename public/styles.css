@@ -1,3 +1,17 @@
 textarea.form-control {
   height: 300px;
 }
+
+.configure-task {
+  border-bottom: 1px #eee solid;
+  line-height: 0px;
+  padding: 10px;
+}
+
+.configure-task p {
+  margin: 10px;
+}
+
+.configure-task:last-child {
+  border-bottom: none;
+}

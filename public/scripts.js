@@ -20,6 +20,16 @@ angular.module('app', ['ui.router'])
 })
 
 .controller('ConfigureCtrl', function($scope) {
+  $scope.compose = '';
+  $scope.tasks = [];
+
+  $scope.addTask = function() {
+    $scope.tasks.push({
+      title: $scope.nextTask
+    });
+    $scope.nextTask = '';
+  };
+
 })
 
 .controller('SuiteCtrl', function($scope) {
