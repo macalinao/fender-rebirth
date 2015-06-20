@@ -20,6 +20,8 @@
     "jquery": "~2.1.4",
     "angular-ui-ace": "bower",
     "angular-bootstrap": "~0.13.0",
-    "components-font-awesome": "~4.3.0"
+    "components-font-awesome": "~4.3.0",
+    "jssha": "~2.0.0",
+    "identicon": "*"
   }
 }
