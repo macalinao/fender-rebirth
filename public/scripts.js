@@ -6,6 +6,10 @@ angular.module('app', ['ui.router'])
     url: '/',
     templateUrl: 'templates/home.html',
     controller: 'HomeCtrl'
+  }).state('configure', {
+    url: '/configure',
+    templateUrl: 'templates/configure.html',
+    controller: 'ConfigureCtrl'
   });
 
   $urlRouterProvider.otherwise('/');
@@ -15,7 +19,7 @@ angular.module('app', ['ui.router'])
 .controller('HomeCtrl', function($scope) {
 })
 
-.controller('SuiteConfigCtrl', function($scope) {
+.controller('ConfigureCtrl', function($scope) {
 })
 
 .controller('SuiteCtrl', function($scope) {
