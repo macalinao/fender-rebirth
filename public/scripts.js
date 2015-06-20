@@ -54,6 +54,12 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
         title: task,
         status: ['pass', 'fail', null][Math.floor(Math.random() * 3)]
       };
+    }),
+    comments: [['bob', 'test'], ['asdf', 'test2']].map(function(d) {
+      return {
+        username: d[0],
+        comment: d[1]
+      };
     })
   };
 
@@ -64,6 +70,14 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
       task.status = status;
     }
   };
+
+  $scope.identiconify = function(seed) {
+    var sha = new jsSHA('SHA-256', 'TEXT');
+    sha.update(seed);
+    var hash = sha.getHash('HEX');
+    var identicon = new Identicon(hash, 50).toString();
+    return 'data:image/png;base64,' + identicon;
+  }
 
 })
 

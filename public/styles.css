@@ -87,3 +87,28 @@ footer {
   margin-top: 10px;
   margin-left: 5px;
 }
+
+.comment-compose {
+  margin-bottom: 15px;
+}
+
+.comment {
+  margin-bottom: 30px;
+  border-bottom: 1px #eee solid;
+}
+
+.author {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.author p {
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+
+.comment .content {
+  display: inline-block;
+  vertical-align: top;
+}
