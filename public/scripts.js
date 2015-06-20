@@ -13,4 +13,16 @@ angular.module('app', ['ui.router'])
 })
 
 .controller('HomeCtrl', function($scope) {
+})
+
+.controller('SuiteConfigCtrl', function($scope) {
+})
+
+.controller('SuiteCtrl', function($scope) {
+  $scope.tasks = ['button blue', 'creates a user'].map(function(e) {
+    return {
+      title: e,
+      status: ['pass', 'fail', null][Math.floor(Math.random() * 3)]
+    };
+  });
 });
