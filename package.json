@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dockerHackathon2015/frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dockerHackathon2015/frontend/issues"
+  },
+  "homepage": "https://github.com/dockerHackathon2015/frontend",
+  "dependencies": {
+    "express": "^4.12.4"
+  }
+}
