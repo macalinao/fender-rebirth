@@ -1,9 +1,23 @@
 <div ng-include="'templates/_navbar.html'"></div>
 <div class="container">
+
   <div class="row">
     <div class="col-md-12">
       <h1 class="page-header">Configure</h1>
       <p>Configure a new test suite.</p>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Compose</h2>
+      <p>Enter your Compose configuration below. This will be used to build and host your test suite.</p>
+      <textarea class="form-control" ng-model="compose"></textarea>
+    </div>
+    <div class="col-md-6">
+      <h2>Tasks</h2>
+      <p>List the tasks you want to have tested.</p>
+    </div>
+  </div>
+
 </div>
