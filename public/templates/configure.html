@@ -1,4 +1,3 @@
-<div ng-include="'templates/_navbar.html'"></div>
 <div class="container">
 
   <div class="row">
@@ -37,7 +36,7 @@
         </form>
       </div>
 
-      <div id="tasks">
+      <div class="task-list">
         <div ng-repeat="task in tasks" class="configure-task">
           <p>{{ task.title }}</p>
           <button href="#" ng-click="deleteTask($index)" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
@@ -54,4 +53,3 @@
   </div>
 
 </div>
-<div ng-include="'templates/_footer.html'"></div>

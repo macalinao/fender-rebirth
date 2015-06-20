@@ -10,6 +10,10 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
     url: '/configure',
     templateUrl: 'templates/configure.html',
     controller: 'ConfigureCtrl'
+  }).state('test', {
+    url: '/tests/:id',
+    templateUrl: 'templates/test.html',
+    controller: 'TestCtrl'
   });
 
   $urlRouterProvider.otherwise('/');
@@ -37,6 +41,21 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
     $scope.nextTask = '';
   };
 
+})
+
+.controller('TestCtrl', function($scope, $stateParams) {
+  var id = $stateParams.id;
+
+  $scope.test = {
+    name: 'User login',
+    link: 'http://box123.todocker.com/',
+    tasks: ['asdf', 'asddasd', 'asd'].map(function(task) {
+      return {
+        title: task,
+        status: ['pass', 'fail', null][Math.floor(Math.random() * 3)]
+      };
+    })
+  };
 })
 
 .controller('SuiteCtrl', function($scope) {

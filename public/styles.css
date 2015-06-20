@@ -2,6 +2,29 @@ textarea.form-control {
   height: 200px;
 }
 
+.test-task {
+  border-bottom: 1px #eee solid;
+  line-height: 0px;
+  padding: 5px;
+}
+
+.test-task p {
+  margin: 15px;
+  display: inline-block;
+}
+
+.test-task .set-status {
+  float: right;
+}
+
+.test-task:last-child {
+  border-bottom: none;
+}
+
+.test-task:hover {
+  background-color: #eee;
+}
+
 .configure-task {
   border-bottom: 1px #eee solid;
   line-height: 0px;
@@ -39,7 +62,7 @@ footer {
   margin-bottom: 20px;
 }
 
-#tasks {
+.task-list {
   height: 300px;
   overflow-y: scroll;
 }
