@@ -19,9 +19,7 @@
   },
   "homepage": "https://github.com/dockerHackathon2015/frontend",
   "dependencies": {
-    "express": "^4.12.4"
-  },
-  "devDependencies": {
+    "express": "^4.12.4",
     "bower": "^1.4.1"
   }
 }

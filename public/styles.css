@@ -8,6 +8,12 @@ textarea.form-control {
   padding: 5px;
 }
 
+.test-task .task-status {
+  margin-left: 10px;
+  width: 15px;
+  display: inline-block;
+}
+
 .test-task p {
   margin: 15px;
   display: inline-block;

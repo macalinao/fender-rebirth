@@ -16,11 +16,20 @@
 
       <div class="task-list">
         <div ng-repeat="task in test.tasks" class="test-task">
-          <p>{{ task.title }}</p>
-          <div class="set-status" ng-if="task.status">
-            <button href="#" ng-click="markTask(task, 'pass')" class="btn btn-sm btn-success"><i class="fa fa-check"></i></button>
-            <button href="#" ng-click="markTask(task, 'pass')" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></button>
+
+          <div class="task-status">
+            <span class="text-success" ng-if="task.status == 'pass'"><strong><i class="fa fa-check"></i></strong></span>
+            <span class="text-danger" ng-if="task.status == 'fail'"><strong><i class="fa fa-remove"></i></strong></span>
           </div>
+
+          <p>{{ task.title }}</p>
+
+          <div class="set-status">
+            <button href="#" ng-click="markTask(task, null)" class="btn btn-sm btn-default"><i class="fa fa-eraser"></i></button>
+            <button href="#" ng-click="markTask(task, 'pass')" class="btn btn-sm btn-success"><i class="fa fa-check"></i></button>
+            <button href="#" ng-click="markTask(task, 'fail')" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></button>
+          </div>
+
         </div>
       </div>
 

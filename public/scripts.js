@@ -56,6 +56,11 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
       };
     })
   };
+
+  $scope.markTask = function(task, status) {
+    task.status = status;
+  };
+
 })
 
 .controller('SuiteCtrl', function($scope) {
