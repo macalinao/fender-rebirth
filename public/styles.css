@@ -88,10 +88,6 @@ footer {
   margin-left: 5px;
 }
 
-.comment-compose {
-  margin-bottom: 60px;
-}
-
 .comment {
   border-top: 1px #eee solid;
   padding-top: 15px;
@@ -111,4 +107,9 @@ footer {
 .comment .content {
   display: inline-block;
   vertical-align: top;
+}
+
+.comment-compose .name {
+  display: inline-block;
+  padding: 20px 0px;
 }

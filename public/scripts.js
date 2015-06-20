@@ -79,6 +79,10 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
     return 'data:image/png;base64,' + identicon;
   };
 
+  $scope.user = {
+    username: 'simplyianm'
+  };
+
 })
 
 .controller('SuiteCtrl', function($scope) {
