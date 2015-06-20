@@ -15,3 +15,7 @@ textarea.form-control {
 .configure-task:last-child {
   border-bottom: none;
 }
+
+.ace_editor {
+  height: 200px;
+}

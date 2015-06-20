@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router'])
+angular.module('app', ['ui.router', 'ui.ace'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -20,7 +20,7 @@ angular.module('app', ['ui.router'])
 })
 
 .controller('ConfigureCtrl', function($scope) {
-  $scope.compose = '';
+  $scope.files = {};
   $scope.tasks = [];
 
   $scope.addTask = function() {
