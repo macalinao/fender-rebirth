@@ -77,7 +77,7 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
     var hash = sha.getHash('HEX');
     var identicon = new Identicon(hash, 50).toString();
     return 'data:image/png;base64,' + identicon;
-  }
+  };
 
 })
 
