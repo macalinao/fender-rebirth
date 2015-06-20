@@ -89,12 +89,12 @@ footer {
 }
 
 .comment-compose {
-  margin-bottom: 15px;
+  margin-bottom: 60px;
 }
 
 .comment {
-  margin-bottom: 30px;
-  border-bottom: 1px #eee solid;
+  border-top: 1px #eee solid;
+  padding-top: 15px;
 }
 
 .author {
