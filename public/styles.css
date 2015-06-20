@@ -1,7 +1,3 @@
-textarea.form-control {
-  height: 200px;
-}
-
 .test-task {
   border-bottom: 1px #eee solid;
   line-height: 0px;
@@ -81,4 +77,13 @@ footer {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, .5);
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.comment-controls {
+  float: right;
+}
+
+.comment-controls button {
+  margin-top: 10px;
+  margin-left: 5px;
 }
