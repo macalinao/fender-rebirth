@@ -61,29 +61,23 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
 
   function patch() {
     return $http.patch(url, $scope.test).success(function(data) {
-      $scope.test = data;
+      // $scope.test = data;
+      updateTest();
     });
   }
 
-  $http.get(url).success(function(data) {
-    $scope.test = data;
-  });
+  function updateTest() {
+    $http.get(url).success(function(data) {
+      $scope.test = data;
+    });
+  }
+  updateTest();
 
   $scope.test = {
     name: 'User login',
     link: 'http://box123.todocker.com/',
-    tasks: ['asdf', 'asddasd', 'asd'].map(function(task) {
-      return {
-        title: task,
-        status: ['pass', 'fail', null][Math.floor(Math.random() * 3)]
-      };
-    }),
-    comments: [['bob', 'test'], ['asdf', 'test2']].map(function(d) {
-      return {
-        username: d[0],
-        comment: d[1]
-      };
-    })
+    tasks: [],
+    comments: []
   };
 
   $scope.markTask = function(task, status) {
@@ -96,10 +90,12 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
   };
 
   $scope.addComment = function() {
-    $scope.test.comments.shift({
+    console.log($scope.test.comments);
+    $scope.test.comments.unshift({
       username: $scope.user.username,
       comment: $scope.nextComment
     });
+    console.log($scope.test.comments);
     $scope.nextComment = '';
     patch();
   };
