@@ -55,8 +55,14 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
 
 })
 
-.controller('TestCtrl', function($scope, $stateParams) {
+.controller('TestCtrl', function($scope, $stateParams, $http) {
   var id = $stateParams.id;
+
+  function patch() {
+    return $http.patch(ISIS_ROOT + '/tasks/' + id, $scope.test).success(function(data) {
+      $scope.test = data;
+    });
+  }
 
   $scope.test = {
     name: 'User login',
@@ -81,6 +87,7 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
     } else {
       task.status = status;
     }
+    patch();
   };
 
   $scope.identiconify = function(seed) {
