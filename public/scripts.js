@@ -57,12 +57,17 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
 
 .controller('TestCtrl', function($scope, $stateParams, $http) {
   var id = $stateParams.id;
+  var url = IRIS_ROOT + '/tasks/' + id;
 
   function patch() {
-    return $http.patch(ISIS_ROOT + '/tasks/' + id, $scope.test).success(function(data) {
+    return $http.patch(url, $scope.test).success(function(data) {
       $scope.test = data;
     });
   }
+
+  $http.get(url).success(function(data) {
+    $scope.test = data;
+  });
 
   $scope.test = {
     name: 'User login',
@@ -84,7 +89,7 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
   $scope.markTask = function(task, status) {
     if (task.status === status) {
       task.status = null;
-    } else {
+   } else {
       task.status = status;
     }
     patch();
