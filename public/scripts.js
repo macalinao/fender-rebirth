@@ -80,6 +80,12 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
     comments: []
   };
 
+  $scope.countTasks = function(type) {
+    return $scope.test.tasks.filter(function(t) {
+      return t.status === type;
+    }).length;
+  };
+
   $scope.markTask = function(task, status) {
     if (task.status === status) {
       task.status = null;

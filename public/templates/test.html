@@ -14,7 +14,17 @@
     <div class="col-md-5">
       <h2>Tasks</h2>
 
+      <ul>
+        <li>
+          <span class="text-success"><strong><i class="fa fa-check"></i></strong>&nbsp;{{ countTasks('pass') }} tests passing</span>
+        </li>
+        <li>
+          <span class="text-danger"><strong><i class="fa fa-remove"></i></strong>&nbsp;{{ countTasks('fail') }} tests failing</span>
+        </li>
+      </ul>
+
       <div class="task-list">
+
         <div ng-repeat="task in test.tasks" class="test-task">
 
           <div class="task-status">
