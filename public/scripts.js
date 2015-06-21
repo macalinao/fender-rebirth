@@ -25,7 +25,7 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
 .controller('HomeCtrl', function($scope) {
 })
 
-.controller('ConfigureCtrl', function($scope, $http) {
+.controller('ConfigureCtrl', function($scope, $http, $location) {
   $scope.files = {};
   $scope.tasks = [];
 
@@ -49,7 +49,7 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
       config: $scope.files
     };
     $http.post(IRIS_ROOT + '/tasks', payload).then(function(res) {
-      alert('jobs done my friend');
+      $location.path('/tests/' + res.data._id);
     });
   };
 
