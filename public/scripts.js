@@ -1,3 +1,5 @@
+var IRIS_ROOT = env.IRIS_ROOT || 'http://54.193.154.148:32779';
+
 angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -23,7 +25,7 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
 .controller('HomeCtrl', function($scope) {
 })
 
-.controller('ConfigureCtrl', function($scope) {
+.controller('ConfigureCtrl', function($scope, $http) {
   $scope.files = {};
   $scope.tasks = [];
 
@@ -39,6 +41,16 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
       title: $scope.nextTask
     });
     $scope.nextTask = '';
+  };
+
+  $scope.submit = function() {
+    var payload = {
+      tasks: $scope.tasks,
+      config: $scope.files
+    };
+    $http.post(IRIS_ROOT + '/tasks', payload).then(function(res) {
+      alert('jobs done my friend');
+    });
   };
 
 })
