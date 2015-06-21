@@ -96,7 +96,7 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
   };
 
   $scope.addComment = function() {
-    $scope.test.comments.push({
+    $scope.test.comments.shift({
       username: $scope.user.username,
       comment: $scope.nextComment
     });
