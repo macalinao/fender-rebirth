@@ -38,14 +38,16 @@
       <h2>Comments</h2>
 
       <div class="comment-compose">
-        <textarea class="form-control" placeholder="Write a comment..."></textarea>
-        <div class="name">
-          <p>Posting as <strong>{{ user.username }}</strong></p>
-        </div>
-        <div class="comment-controls">
-          <button class="btn btn-default">Cancel</button>
-          <button class="btn btn-primary">Submit</button>
-        </div>
+        <form>
+          <textarea class="form-control" placeholder="Write a comment..." ng-model="nextComment"></textarea>
+          <div class="name">
+            <p>Posting as <strong>{{ user.username }}</strong></p>
+          </div>
+          <div class="comment-controls">
+            <button class="btn btn-default">Cancel</button>
+            <button class="btn btn-primary" ng-click="addComment()">Submit</button>
+          </div>
+        </form>
       </div>
 
       <div class="comments">

@@ -95,6 +95,15 @@ angular.module('app', ['ui.router', 'ui.ace', 'ui.bootstrap'])
     patch();
   };
 
+  $scope.addComment = function() {
+    $scope.test.comments.push({
+      username: $scope.user.username,
+      comment: $scope.nextComment
+    });
+    $scope.nextComment = '';
+    patch();
+  };
+
   $scope.identiconify = function(seed) {
     var sha = new jsSHA('SHA-256', 'TEXT');
     sha.update(seed);
